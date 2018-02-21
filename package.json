@@ -2,6 +2,7 @@
   "name": "snippets",
   "version": "1.0.0",
   "scripts": {
+    "preinstall": "npm install",
     "start": "npm run prod && node dist/server/snippets.js",
     "dev": "npm-run-all --parallel watch:*",
     "prod": "rm -rf dist && NODE_ENV=production webpack -p && cp -rf public dist && cp package.json dist/server",
