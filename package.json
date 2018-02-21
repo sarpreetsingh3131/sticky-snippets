@@ -2,11 +2,11 @@
   "name": "snippets",
   "version": "1.0.0",
   "scripts": {
-    "start": "npm-run-all --parallel watch:*",
+    "serve": "npm run prod && node dist/server/snippets.js",
+    "dev": "npm-run-all --parallel watch:*",
     "prod": "rm -rf dist && NODE_ENV=production webpack -p && cp -rf public dist && cp package.json dist/server",
     "watch:client": "webpack-dev-server",
     "watch:server": "nodemon ./server/app.js --exec babel-node --presets es2015,stage-2",
-    "serve": "npm run prod && node dist/server/snippets.js"
   },
   "author": "Sarpreet Singh Buttar",
   "license": "MIT",
