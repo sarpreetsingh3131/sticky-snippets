@@ -6,7 +6,7 @@
     "dev": "npm-run-all --parallel watch:*",
     "prod": "rm -rf dist && NODE_ENV=production webpack -p && cp -rf public dist && cp package.json dist/server",
     "watch:client": "webpack-dev-server",
-    "watch:server": "nodemon ./server/app.js --exec babel-node --presets es2015,stage-2",
+    "watch:server": "nodemon ./server/app.js --exec babel-node --presets es2015,stage-2"
   },
   "author": "Sarpreet Singh Buttar",
   "license": "MIT",
